@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BooleanAndIntConverter.java&apos; to &apos;disease/src/org.ynu.converter&apos;&#x0D;&#x0A;- Original project: &apos;MyBatisProject3&apos;&#x0D;&#x0A;- Destination element: &apos;disease/src/org.ynu.converter&apos;&#x0D;&#x0A;- Original element: &apos;org.hys.converter.BooleanAndIntConverter.java&apos;" description="Copy compilation unit" destination="=disease/src&lt;org.ynu.converter" element1="/src&lt;org.hys.converter{BooleanAndIntConverter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1582461205083" units="1" version="1.0"/>
+</session>

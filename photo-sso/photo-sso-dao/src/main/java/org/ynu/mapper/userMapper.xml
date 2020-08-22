@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件路径 -->
+<!-- namespace:该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="org.ynu.mapper.UserMapper">
+    
+    <!-- 增加用户 -->
+    <insert id="addUser" parameterType="User">
+    	insert into photo.user(uname,upwd,school) values(#{uname},#{upwd},#{school})
+    </insert>
+    
+    <!-- 根据名字删除用户 -->
+    <delete id="deleteUserByName" parameterType="String">
+    	delete from photo.user where uname=#{uname}
+    </delete>
+    
+    <!-- 修改用户 -->
+    <update id="updateUser" parameterType="User">
+    	update photo.user set uname=#{uname},upwd=#{upwd},school=#{school} where uid=#{uid}
+    </update>
+    
+    <!-- 根据用户名查找用户 -->
+    <select id="queryUserByName" resultType="User" parameterType="String">
+        SELECT * FROM photo.user WHERE uname=#{uname}
+    </select>
+    
+    <!-- 根据名字密码查用户 -->
+    <select id="queryUserByNameAndPwd" resultType="User">
+        SELECT * FROM photo.user WHERE uname=#{uname} and upwd=#{upwd}
+    </select>
+
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件路径 -->
+<!-- namespace:该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="org.ynu.mapper.MerchantMapper">
+    
+    <!-- 增加商家 -->
+    <insert id="addMerchant" parameterType="Merchant">
+    	insert into photo.merchant(mname,mpwd,maddress) values(#{mname},#{mpwd},#{maddress})
+    </insert>
+    
+    <!-- 根据用户名和密码查找商家 -->
+    <select id="queryMerchantByMnameAndMpwd" resultType="Merchant">
+        SELECT * FROM photo.merchant WHERE mname=#{mname} and mpwd=#{mpwd}
+    </select>
+    
+    <!-- 根据地址查找商家 -->
+    <select id="queryMerchantByMaddress" resultType="Merchant" parameterType="String">
+        SELECT * FROM photo.merchant WHERE maddress=#{maddress}
+    </select>
+    
+    <!-- 根据商家名查id -->
+    <select id="queryMidByMname" resultType="Long" parameterType="String">
+        SELECT mid FROM photo.merchant WHERE mname=#{mname}
+    </select>
+    
+    
+</mapper>

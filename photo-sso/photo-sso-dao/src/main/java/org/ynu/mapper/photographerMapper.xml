@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件路径 -->
+<!-- namespace:该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="org.ynu.mapper.PhotographerMapper">
+    
+    <!-- 增加摄影师 -->
+    <insert id="addPhotographer" parameterType="Photographer">
+    	insert into photo.photographer(pname,ppwd,school,price,portray,graduation,room,couple,face) 
+    	values(#{pname},#{ppwd},#{school},#{price},#{portray},#{graduation},#{room},#{couple},#{face})
+    </insert>
+    
+    <!-- 删除摄影师 -->
+    <delete id="deletePhotographer" parameterType="String">
+    	delete from photo.photographer where pname=#{pname}
+    </delete>
+    
+    <!-- 修改摄影师 -->
+    <update id="updatePhotographer" parameterType="Photographer">
+    	update photo.photographer set school=#{school},price=#{price},
+    	portray=#{portray},graduation=#{graduation},room={room},couple=#{couple},face=#{face}
+    	 where pname=#{pname}
+    </update>
+    
+    <!-- 根据用户名查找摄影师 -->
+    <select id="queryPhotographerByName" resultType="Photographer" parameterType="String">
+        SELECT * FROM photo.photographer WHERE pname=#{pname}
+    </select>
+    
+    <!-- 根据用户名和密码查找摄影师 -->
+    <select id="queryPhotographerByNameAndPwd" resultType="Photographer">
+        SELECT * FROM photo.photographer WHERE pname=#{pname} and ppwd=#{ppwd}
+    </select>
+    
+    <!-- 根据学校查找摄影师 价格升序 -->
+    <select id="queryPhotographerBySchool" resultType="Photographer" parameterType="String">
+        SELECT * FROM photo.photographer WHERE school=#{school} ORDER BY price
+    </select>
+    
+    <!-- 根据价格区间查找摄影师 价格升序 -->
+    <select id="queryPhotographerByPrice" resultType="Photographer">
+        SELECT * FROM photo.photographer WHERE price BETWEEN #{low} AND #{high} ORDER BY price
+    </select>
+    
+    <!-- 根据写真风格查找摄影师 价格升序 -->
+    <select id="queryPhotographerByPortray" resultType="Photographer" parameterType="String">
+        SELECT * FROM photo.photographer where portray=#{style} ORDER BY price
+    </select>
+    
+    <!-- 根据毕业照风格查找摄影师 价格升序 -->
+    <select id="queryPhotographerByGraduation" resultType="Photographer" parameterType="String">
+        SELECT * FROM photo.photographer where graduation=#{style} ORDER BY price
+    </select>
+    
+    <!-- 根据私房风格查找摄影师 价格升序 -->
+    <select id="queryPhotographerByRoom" resultType="Photographer" parameterType="String">
+        SELECT * FROM photo.photographer where room=#{style} ORDER BY price
+    </select>
+    
+    <!-- 根据情侣风格查找摄影师 价格升序 -->
+    <select id="queryPhotographerByCouple" resultType="Photographer" parameterType="String">
+        SELECT * FROM photo.photographer where couple=#{style} ORDER BY price
+    </select>
+    
+    <!-- 根据肖像风格查找摄影师 价格升序 -->
+    <select id="queryPhotographerByFace" resultType="Photographer" parameterType="String">
+        SELECT * FROM photo.photographer where face=#{style} ORDER BY price
+    </select>
+
+</mapper>

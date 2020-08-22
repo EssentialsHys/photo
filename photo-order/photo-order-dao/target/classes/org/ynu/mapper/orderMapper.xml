@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件路径 -->
+<!-- namespace:该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="org.ynu.mapper.OrderMapper">
+    
+    <!-- 添加订单 -->
+    <insert id="addOrder" parameterType="Order" useGeneratedKeys="true" keyProperty="oid">
+    	insert into photo.order(uid,pid,location,num,totalprice,createtime) 
+    	values(#{user.uid},#{photographer.pid},#{location},#{num},#{totalPrice},#{createTime})
+    </insert>
+    
+    <!-- 开始订单 -->
+    <update id="startOrder" parameterType="Order">
+    	update photo.order set starttime=#{startTime} where oid=#{oid}
+    </update>
+    
+    <!-- 结束订单 -->
+    <update id="endOrder" parameterType="Order">
+    	update photo.order set endtime=#{endTime} where oid=#{oid}
+    </update>
+    
+    <!-- 查找摄影师的订单 时间降序 -->
+    <select id="queryOrderByPname" resultType="Order" parameterType="String">
+        SELECT * FROM photo.order WHERE pname=#{pname} ORDER BY starttime desc
+    </select>
+    
+    <!-- 查找用户的订单 时间降序 -->
+    <select id="queryOrderByUname" resultType="Order" parameterType="String">
+        SELECT * FROM photo.order WHERE uname=#{user.uname} ORDER BY starttime desc
+    </select>
+    
+    <!-- 根据订单id查找订单 -->
+    <select id="queryOrderByOid" resultType="Order" parameterType="Long">
+        SELECT * FROM photo.order WHERE oid=#{oid}
+    </select>
+    
+    <!-- 根据oid查pid -->
+    <select id="queryPidByOid" resultType="Long" parameterType="Long">
+        SELECT pid FROM photo.order WHERE oid=#{oid}
+    </select>
+    
+    <!-- 根据pid查订单 -->
+    <select id="queryOrderByPid" resultType="Order" parameterType="Long">
+        SELECT * FROM photo.order WHERE pid=#{pid}
+    </select>
+    
+    
+    
+    
+    
+
+</mapper>

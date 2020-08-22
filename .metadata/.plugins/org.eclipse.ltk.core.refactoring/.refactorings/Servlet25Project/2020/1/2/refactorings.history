@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;index.jsp&apos; to &apos;WebContent&apos;&#x0D;&#x0A;- Original project: &apos;Servlet25Project&apos;&#x0D;&#x0A;- Destination element: &apos;WebContent&apos;&#x0D;&#x0A;- Original element: &apos;index.jsp&apos;" description="Copy file" element1="WebContent/index.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1578582675695" target="/Servlet30Project/WebContent" units="0" version="1.0"/>
+</session>

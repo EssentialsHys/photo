@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件路径 -->
+<!-- namespace:该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="org.ynu.mapper.PictureMapper">
+    	
+    <!-- 上传图片 -->
+    <insert id="upload">
+    	insert into photo.picture(pid,url) values (#{photographer.pid},#{url})
+    </insert>
+    
+    <!-- 上传订单图片 -->
+    <insert id="uploadOrder" parameterType="OrderPic">
+    	insert into photo.orderpic(oid,url) values (#{order.oid},#{url})
+    </insert>
+    
+    <!-- 上传商品图片 -->
+    <insert id="uploadItem" parameterType="String">
+    	insert into photo.orderpic(oid,url) values (#{order.oid},#{url})
+    </insert>
+    
+    <!-- 查找用户的图片 -->
+    <select id="queryUserPics" resultType="String" parameterType="Photographer">
+        SELECT url FROM photo.picture WHERE pid=#{pid}
+    </select>
+    
+
+</mapper>

@@ -1,0 +1,10 @@
+package org.ynu.service;
+
+/**
+ * @Description: 会员服务
+ * @author: hys 
+ * @date: 2020年6月6日
+ */
+public interface VIPService {
+	public void ChangeClothes(String fileName1, String fileName2);
+}

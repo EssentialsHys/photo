@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+        
+<configuration>
+    <properties resource="db.properties"></properties>
+    
+    <typeAliases>
+    	<!-- 批量定义别名 忽略大小写 -->
+    	<package name="org.ynu.pojo"/>
+    </typeAliases>
+
+	<mappers>
+		<!-- 加载映射文件 -->
+		<mapper resource="org/ynu/mapper/photographerMapper.xml" />
+		<mapper resource="org/ynu/mapper/userMapper.xml" />
+		<mapper resource="org/ynu/mapper/merchantMapper.xml" />
+	</mappers>
+
+</configuration>

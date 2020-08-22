@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将包“com.itheima.dao”复制到“hys.ynu/src/main/java”&#x0D;&#x0A;－ 原始项目：“TestServer”&#x0D;&#x0A;－ 目标元素：“hys.ynu/src/main/java”&#x0D;&#x0A;－ 原始元素：“TestServer/src/com.itheima.dao”" description="复制包" destination="=hys.ynu/src\/main\/java" element1="/src&lt;com.itheima.dao" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1558670172197" version="1.0"/>
+</session>

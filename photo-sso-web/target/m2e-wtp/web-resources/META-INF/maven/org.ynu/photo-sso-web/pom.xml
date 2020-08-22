@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.ynu</groupId>
+    <artifactId>photo-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.ynu</groupId>
+  <artifactId>photo-sso-web</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <dependencies>
+  	<dependency>
+		<groupId>org.ynu</groupId>
+ 		<artifactId>photo-sso-interface</artifactId>
+ 		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>org.ynu</groupId>
+ 		<artifactId>photo-common</artifactId>
+ 		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>3.7.0</version>
+  			<configuration>
+  				<source>1.8</source>
+  				<target>1.8</target>
+  				<encoding>UTF8</encoding>
+  			</configuration>
+  		</plugin> 
+  		<plugin>
+  			<groupId>org.apache.tomcat.maven</groupId>
+  			<artifactId>tomcat7-maven-plugin</artifactId>
+  			<configuration>
+  				<port>9097</port>
+  				<path>/</path>
+  				<url>http://59.110.225.242:9097/manager/text</url>
+  				<username>hys</username>
+  				<password>hys</password>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>

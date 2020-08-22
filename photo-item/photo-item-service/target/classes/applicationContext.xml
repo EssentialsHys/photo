@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	
+	<bean id="config" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+		<property name="locations">
+			<array>
+				<value>classpath:db.properties</value>
+				<value>classpath:resource.properties</value>  
+			</array>
+		</property>
+	</bean>
+	
+	<!-- 配置数据库相关 -事务 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${driver}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${username}"></property>
+		<property name="password" value="${password}"></property>
+	</bean>
+	
+	<!-- 配置事务管理器txManager -->
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!-- 增加对事务的支持 -->
+	<tx:annotation-driven transaction-manager="txManager"/>
+	
+	<context:component-scan base-package="org.ynu.service.impl"></context:component-scan>
+	
+	<!-- 在SpringIOC容器中 创建MyBatis的核心类 SqlSessionFactory -->
+	<!-- conf.xml:数据源 mapper.xml -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 加载MyBatis配置文件 -->
+		<property name="configLocation" value="classpath:conf.xml"></property>
+	</bean>
+	
+	<!-- Spring整合MyBatis:将MyBatis中的SqlSessionFactory交给Spring -->
+	<!-- 第三种方式生成mapper对象(批量产生多个mapper) 批量产生Mapper对在SpringIOC中的id值默认就是接口名(接口名=id值) -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+		<!-- 指定批量产生哪个包中的mapper对象 -->
+		<property name="basePackage" value="org.ynu.mapper"></property>
+	</bean>
+	
+	<!-- dubbo应用名称 -->
+	<dubbo:application name="photo-item"></dubbo:application>
+	<!-- 注册中心地址 -->
+	<dubbo:registry protocol="zookeeper" address="zookeeper://39.105.2.99:2181"></dubbo:registry>
+	
+	<!-- 指定通信规则 -->
+	<dubbo:protocol name="dubbo" port="20803"></dubbo:protocol>
+	
+	<!-- 暴露服务 -->
+	<dubbo:service interface="org.ynu.service.ItemService" ref="itemServiceImpl" timeout="1200000"></dubbo:service>
+	
+	<!-- dubbo扫描包 -->
+	<dubbo:annotation package="org.ynu.service.impl"/>
+	
+	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+		<constructor-arg name="host" value="59.110.62.54"></constructor-arg>
+		<constructor-arg name="port" value="6379"></constructor-arg>
+	</bean>
+	
+	<bean id="jedisPoolClient" class="org.ynu.util.jedis.JedisPoolClient">
+		<property name="jedisPool" ref="jedisPool"/>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</beans>

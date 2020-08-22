@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;userMapper.xml&apos; to &apos;photo-user-dao/src/main/java/org.ynu.hys.mapper&apos;&#x0D;&#x0A;- Original project: &apos;disease&apos;&#x0D;&#x0A;- Destination element: &apos;photo-user-dao/src/main/java/org.ynu.hys.mapper&apos;&#x0D;&#x0A;- Original element: &apos;userMapper.xml&apos;" description="Copy file" destination="=photo-user-dao/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.ynu.hys.mapper" element1="src/org/ynu/mapper/userMapper.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1584855877530" units="0" version="1.0"/>
+</session>

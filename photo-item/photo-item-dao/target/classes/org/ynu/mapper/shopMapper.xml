@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件路径 -->
+<!-- namespace:该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="org.ynu.mapper.ShopMapper">
+    
+   
+    <!-- 添加商铺 -->
+    <insert id="updateShop" parameterType="Shop">
+    	insert into photo.shop(mid,iid) values(#{mid},#{iid})	
+    </insert>
+   
+   
+    
+    
+
+</mapper>

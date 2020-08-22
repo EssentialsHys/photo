@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件路径 -->
+<!-- namespace:该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="org.ynu.mapper.ItemMapper">
+    
+    <!-- 添加订单 -->
+    <insert id="addItem" parameterType="Item" useGeneratedKeys="true" keyProperty="iid">
+    	insert into photo.item(name,price,description,num,pic) values(#{name},#{price},#{description},#{num},#{pic})	
+    </insert>
+  
+    
+    <!-- 查找商品 -->
+    <select id="queryAllItems" resultType="Item">
+        SELECT * FROM photo.item
+    </select>
+  
+    
+    <!-- 根据名字查id -->
+    <select id="queryIidByName" resultType="Long" parameterType="String">
+        SELECT iid FROM photo.item where name=#{name}
+    </select>
+   
+   
+    
+    
+
+</mapper>

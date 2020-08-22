@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;photo-item-service/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;photo-order-service&apos;&#x0D;&#x0A;- Destination element: &apos;photo-item-service/src/main/resources&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     applicationContext.xml&#x0D;&#x0A;     conf.xml&#x0D;&#x0A;     db.properties" description="Copy files" destination="=photo-item-service/src\/main\/resources=/maven.pomderived=/true=/" element1="src/main/resources/applicationContext.xml" element2="src/main/resources/conf.xml" element3="src/main/resources/db.properties" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1591103371192" units="0" version="1.0"/>
+</session>

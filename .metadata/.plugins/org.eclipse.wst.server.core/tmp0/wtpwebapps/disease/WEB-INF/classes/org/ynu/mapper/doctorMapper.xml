@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件路径 -->
+<!-- namespace:该mapper.xml映射文件的唯一标识 -->
+<mapper namespace="org.ynu.mapper.DoctorMapper">
+    
+    <!-- 增加医生 -->
+    <insert id="addDoctor" parameterType="Doctor">
+    	insert into disease.doctor(username,password,gender,hospital) values(#{username},#{password},#{gender},#{hospital})
+    </insert>
+    
+    <!-- 修改医生的医院 -->
+    <update id="updateDoctorByHospital" parameterType="Doctor">
+    	update disease.doctor set hospital=#{hospital} where username=#{username}
+    </update>
+    
+    <!-- 根据名字查医生 -->
+    <select id="queryDoctorByUsername" resultType="Doctor" parameterType="String">
+        SELECT * FROM disease.doctor WHERE username=#{username}
+    </select>
+    
+    <!-- 根据名字密码查医生 -->
+    <select id="queryDoctorByUsernameAndPassword" resultType="Doctor" parameterType="Login">
+        SELECT * FROM disease.doctor WHERE username=#{username} and password=#{password}
+    </select>
+
+    
+</mapper>

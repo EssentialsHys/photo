@@ -1,0 +1,16 @@
+127.0.0.1 - - [18/Apr/2020:16:22:42 +0800] "GET / HTTP/1.1" 404 679
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:23:29 +0800] "GET /disease HTTP/1.1" 404 686
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:23:29 +0800] "GET /favicon.ico HTTP/1.1" 404 690
+127.0.0.1 - - [18/Apr/2020:16:25:32 +0800] "GET / HTTP/1.1" 404 679
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:25:39 +0800] "GET /disease HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:25:40 +0800] "GET /disease/ HTTP/1.1" 200 341
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:25:43 +0800] "GET /disease/login.jsp HTTP/1.1" 200 542
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:26:03 +0800] "POST /disease/user/login HTTP/1.1" 200 13
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:26:25 +0800] "POST /disease/doctor/login HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:26:42 +0800] "GET /disease/patient/patient HTTP/1.1" 400 820
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:29:44 +0800] "GET /disease/patient/patient?diseasename=d1&province=p1 HTTP/1.1" 400 820
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:29:49 +0800] "GET /disease/patient/patient?diseasename=d1&province=p1 HTTP/1.1" 400 820
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:29:50 +0800] "GET /disease/patient/patient?diseasename=d1&province=p1 HTTP/1.1" 400 820
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:29:51 +0800] "GET /disease/patient/patient?diseasename=d1&province=p1 HTTP/1.1" 400 820
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:31:57 +0800] "GET /disease/patient/patient?diseasename=d2&province=p2 HTTP/1.1" 400 820
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:16:33:37 +0800] "GET /disease/patient/patient?diseaseName=d2&province=p2 HTTP/1.1" 200 168
