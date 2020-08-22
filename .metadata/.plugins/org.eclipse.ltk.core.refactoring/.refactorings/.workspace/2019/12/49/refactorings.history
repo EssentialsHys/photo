@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="将Java 项目“Junit”重命名为“JunitTest”&#x0D;&#x0A;－ 原始元素：“Junit”&#x0D;&#x0A;－ 重命名的元素：“Junit”&#x0D;&#x0A;－ 更新对已重构元素的引用" description="重命名 Java 项目“Junit”" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=Junit" name="JunitTest" references="true" stamp="1575604371706" version="1.0"/>
-</session>

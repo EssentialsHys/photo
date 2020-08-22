@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 3 elements to &apos;lib&apos;&#x0D;&#x0A;- Original project: &apos;disease&apos;&#x0D;&#x0A;- Destination element: &apos;lib&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     jackson-annotations-2.7.4.jar&#x0D;&#x0A;     jackson-databind-2.7.4.jar&#x0D;&#x0A;     jackson-core-2.7.4.jar" description="Copy files" element1="WebContent/WEB-INF/lib/jackson-annotations-2.7.4.jar" element2="WebContent/WEB-INF/lib/jackson-databind-2.7.4.jar" element3="WebContent/WEB-INF/lib/jackson-core-2.7.4.jar" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1585714364453" target="/SpringMVCSpringMyBatis/WebContent/WEB-INF/lib" units="0" version="1.0"/>
-</session>

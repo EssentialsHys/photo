@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;applicationContext.xml&apos; to &apos;SMProject/src&apos;&#x0D;&#x0A;- Original project: &apos;SpringProject&apos;&#x0D;&#x0A;- Destination element: &apos;SMProject/src&apos;&#x0D;&#x0A;- Original element: &apos;applicationContext.xml&apos;" description="Copy file" destination="=SMProject/src" element1="src/applicationContext.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1581349209028" units="0" version="1.0"/>
-</session>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;org.hys.aop.LogAnnotation&apos; to &apos;LogAspectAnnotation&apos;&#x0D;&#x0A;- Original project: &apos;SpringProject&apos;&#x0D;&#x0A;- Original element: &apos;org.hys.aop.LogAnnotation&apos;&#x0D;&#x0A;- Renamed element: &apos;org.hys.aop.LogAspectAnnotation&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LogAnnotation&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;org.hys.aop{LogAnnotation.java[LogAnnotation" matchStrategy="1" name="LogAspectAnnotation" qualified="false" references="true" similarDeclarations="false" stamp="1580647667846" textual="false" version="1.0"/>
-</session>

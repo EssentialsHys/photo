@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;photographerMapper.xml&apos; to &apos;photo-order-dao/src/main/java/mapper&apos;&#x0D;&#x0A;- Original project: &apos;photo-portal-dao&apos;&#x0D;&#x0A;- Destination element: &apos;photo-order-dao/src/main/java/mapper&apos;&#x0D;&#x0A;- Original element: &apos;photographerMapper.xml&apos;" description="Copy file" destination="=photo-order-dao/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;mapper" element1="src/main/java/org/ynu/mapper/photographerMapper.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1587187896565" units="0" version="1.0"/>
-</session>

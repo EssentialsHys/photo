@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;org.ynu.dao&apos; to &apos;org.ynu.mapper&apos;&#x0D;&#x0A;- Original project: &apos;photo-vip-dao&apos;&#x0D;&#x0A;- Original element: &apos;photo-vip-dao/src/main/java/org.ynu.dao&apos;&#x0D;&#x0A;- Renamed element: &apos;photo-vip-dao/src/main/java/org.ynu.mapper&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;org.ynu.dao&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.ynu.dao" name="org.ynu.mapper" qualified="false" references="true" stamp="1587743135446" textual="false" version="1.0"/>
-</session>
