@@ -27,9 +27,9 @@ Redis
 缓存数据（以查询摄影师为例）  
 ![image](https://github.com/EssentialsHys/photo/blob/master/images/redis.png)  
 Session  
-![image](https://github.com/EssentialsHys/photo/blob/master/images/redis.png)  
+![image](https://github.com/EssentialsHys/photo/blob/master/images/session.png)  
 Cookie  
-![image](https://github.com/EssentialsHys/photo/blob/master/images/redis.png)  
+![image](https://github.com/EssentialsHys/photo/blob/master/images/cookie.png)  
 Cookie中保存Session的id，类似于JSESSIONID，作为Cookie和Session匹配的唯一标识，我们在Session中保存用户名  
 
 跨设备进程通信——调用队友深度学习模型实现“智能换衣服”和“智能换背景”  
