@@ -4,3 +4,4 @@
 Maven+SpringMVC+Spring+MyBatis+MySQL+Dubbo+Zookeeper+Redis+FastDFS+Nginx+Tomcat  
 注：jsp文件只是用来测试功能  
 注：阿里云服务器已过期 接口文档已失效  
+![image](https://github.com/EssentialsHys/photo/blob/master/images/cookie.png)
